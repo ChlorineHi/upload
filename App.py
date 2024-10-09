@@ -7,7 +7,7 @@ from langchain_community.chat_message_histories import ChatMessageHistory
 import hashlib
 import os
 from streamlit_lottie import st_lottie
-from dotenv import load_dotenv, find_dotenv
+
 from tavily import TavilyClient
 import datetime
 from langgraph.graph import StateGraph, START, END
@@ -23,9 +23,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 
 #这里是各类变量, 和所用api的调用模块
-_ = load_dotenv(find_dotenv())
 
-load_dotenv()
 api_key = "860779ea256ea8bc5b82bc4a80805346.5XOw3HFZ9ZZqjkxB"
 tavily_answer = TavilyClient(api_key='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')
 if not api_key:
